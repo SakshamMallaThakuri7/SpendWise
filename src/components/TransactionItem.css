@@ -1,0 +1,122 @@
+.transaction-item {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr 1fr 32px;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13.5px;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-item:hover {
+  background: var(--paper);
+}
+
+.cell-description {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 500;
+}
+
+.type-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-income {
+  background: var(--income);
+}
+
+.dot-expense {
+  background: var(--expense);
+}
+
+.category-pill {
+  display: inline-block;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.cell-date {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+}
+
+.cell-amount {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.delete-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink-soft);
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.delete-btn:hover {
+  background: var(--expense-bg);
+  color: var(--expense);
+  border-color: var(--expense);
+}
+
+@media (max-width: 700px) {
+  .transaction-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    padding: 14px 16px;
+    position: relative;
+  }
+
+  .cell-description {
+    width: 100%;
+    padding-right: 30px;
+  }
+
+  .cell-date {
+    order: 3;
+  }
+
+  .cell-date::after {
+    content: '·';
+    margin-left: 10px;
+    color: var(--line);
+  }
+
+  .cell-amount {
+    order: 4;
+    margin-left: auto;
+  }
+
+  .cell.align-right:last-child {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+  }
+
+  .delete-btn {
+    margin-left: 0;
+  }
+}

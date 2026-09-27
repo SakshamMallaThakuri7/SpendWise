@@ -1,0 +1,94 @@
+.transaction-form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.form-toggle {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  flex: 1;
+  border: none;
+  background: var(--paper);
+  padding: 9px 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.toggle-btn.active.income {
+  background: var(--income-bg);
+  color: var(--income);
+}
+
+.toggle-btn.active.expense {
+  background: var(--expense-bg);
+  color: var(--expense);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.form-field input,
+.form-field select {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 9px 10px;
+  font-size: 14px;
+  color: var(--ink);
+  background: #fff;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--gold);
+}
+
+.form-error {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--expense);
+  background: var(--expense-bg);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.form-submit {
+  margin-top: 4px;
+  border: none;
+  border-radius: 7px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 11px 0;
+  transition: opacity 0.15s ease;
+}
+
+.form-submit:hover {
+  opacity: 0.85;
+}

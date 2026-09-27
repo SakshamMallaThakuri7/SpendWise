@@ -1,0 +1,42 @@
+.header {
+  background: var(--ink);
+  color: #fff;
+  padding: 22px 24px;
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-mark {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.header-subtitle {
+  margin: 2px 0 0;
+  font-size: 13.5px;
+  color: #c7cdd6;
+}
